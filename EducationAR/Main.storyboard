@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="EducationAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BwZ-vm-8pe"/>
+                        <viewControllerLayoutGuide type="bottom" id="nbi-IF-kVN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gdM-EX-KBy">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="skA-8i-zcn">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <subviews>
+                                    <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xL0-MJ-QRe">
+                                        <rect key="frame" x="0.0" y="0.0" width="333.5" height="375"/>
+                                    </arscnView>
+                                    <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBL-UT-LR3">
+                                        <rect key="frame" x="333.5" y="0.0" width="333.5" height="375"/>
+                                    </arscnView>
+                                </subviews>
+                            </stackView>
+                            <containerView hidden="YES" opaque="NO" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jaa-g9-i3P">
+                                <rect key="frame" x="212" y="246" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="Wfk-1A-FBR" kind="embed" id="8BA-HC-31i"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="skA-8i-zcn" firstAttribute="leading" secondItem="gdM-EX-KBy" secondAttribute="leading" id="HMp-fo-OME"/>
+                            <constraint firstItem="skA-8i-zcn" firstAttribute="top" secondItem="BwZ-vm-8pe" secondAttribute="bottom" id="iTg-py-8Hs"/>
+                            <constraint firstItem="nbi-IF-kVN" firstAttribute="top" secondItem="skA-8i-zcn" secondAttribute="bottom" id="qzd-J9-Ape"/>
+                            <constraint firstAttribute="trailing" secondItem="skA-8i-zcn" secondAttribute="trailing" id="rtU-Fx-q4G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="xL0-MJ-QRe" id="pVu-WW-jOH"/>
+                        <outlet property="sceneView2" destination="HBL-UT-LR3" id="MlX-V1-Y2t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.880059970015" y="138.40000000000001"/>
+        </scene>
+        <!--Controller-->
+        <scene sceneID="LHD-cQ-pCN">
+            <objects>
+                <viewController id="Wfk-1A-FBR" customClass="BLEController" customModule="EducationAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hBy-eE-Br2"/>
+                        <viewControllerLayoutGuide type="bottom" id="XEE-Oy-xTE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MYb-oK-C85">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8B-I2-pwz">
+                                <rect key="frame" x="11" y="62" width="213" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Button Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOr-4p-gbd">
+                                <rect key="frame" x="16" y="27" width="208" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="BluetoothStatus" destination="Z8B-I2-pwz" id="eR3-Sr-9op"/>
+                        <outlet property="label1" destination="IOr-4p-gbd" id="t04-RU-R5S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVm-ij-LPe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-471.36431784107947" y="-163.19999999999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
